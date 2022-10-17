@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh '''
 		echo "Hello Test stage is triggered automatically `hostname`"
-		bash $(WORKSPACE)/Git_Pipeline/Linux/test.sh
+		bash $(WORKSPACE)/Linux/test.sh
 		'''
             }
         }
