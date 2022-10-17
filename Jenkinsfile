@@ -8,8 +8,10 @@ pipeline{
         }
         stage('Test'){
             steps{
-                sh 'echo "Hello Test stage is triggered automatically `hostname`"'
+                sh '''
+		echo "Hello Test stage is triggered automatically `hostname`"
 		bash $(WORKSPACE)/Git_Pipeline/Linux/test.sh
+		'''
             }
         }
     }
