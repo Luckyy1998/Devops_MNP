@@ -3,7 +3,10 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                sh 'echo "Hello build stage is triggered automatically from `hostname`"'
+                sh '''
+		echo "Hello build stage is triggered automatically from `hostname`"
+		./${WORKSPACE}/Linux/test.sh
+		'''
             }
         }
         stage('Test'){
