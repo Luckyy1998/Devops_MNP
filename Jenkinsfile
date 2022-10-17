@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                sh 'echo "Hello build stage is triggered automatically from 'hostname' host"'
+                sh 'echo "Hello build stage is triggered automatically"'
             }
         }
         stage('Test'){
             steps{
-                sh 'echo "Hello Test stage is triggered automatically from 'hostname' host"'
+                sh 'echo "Hello Test stage is triggered automatically"'
             }
         }
     }
